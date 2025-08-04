@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
         `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
       );
       city_disc.innerHTML = data.weather[0].description;
-      city_feel.innerHTML = data.main.feels_like;
-      city_pressure.innerHTML = data.main.pressure;
-      city_speed.innerHTML = data.wind.speed;
-      city_humidity.innerHTML = data.main.humidity;
+      city_feel.innerHTML = `${data.main.feels_like}°C`;
+      city_pressure.innerHTML = `${data.main.pressure} hPa`;
+      city_speed.innerHTML = `${data.wind.speed} kph`;
+      city_humidity.innerHTML = `${data.main.humidity} %`;
     } catch (e) {
       const errorMessage = document.querySelector(".error-message");
       errorMessage.innerText =
@@ -54,3 +54,4 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   WeatherData();
 });
+
