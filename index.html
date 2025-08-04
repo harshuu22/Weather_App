@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="flex justify-center items-center min-h-screen bg-gray-800">
+    <div
+      class="bg-gray-900 p-6 rounded-2xl w-full max-w-md shadow-2xl text-white"
+    >
+      <form class="search-input">
+        <input
+          type="text"
+          class="border border-gray-600 p-2 rounded w-full focus:border-gray-400 focus:outline-none mb-2 cityname"
+          placeholder="Search City Here "
+        />
+      </form>
+      <h1 class="text-2xl city-name mb-2"></h1>
+      <div class="flex flex-col items-center mb-4">
+        <img src="" alt="Weather Icon" class="weather-icon h-20 w-20 mb-2" />
+        <h2 class="text-3xl font-semibold text-white city-temp mb-1"></h2>
+        <p class="text-sm text-gray-300 city-disc capitalize"></p>
+      </div>
+      <div class="grid grid-container grid-cols-2 gap-2">
+        <div class="bg-gray-800 p-2 rounded-lg">
+          Feels like
+          <p class="text-center city-feel">0</p>
+        </div>
+        <div class="bg-gray-800 p-2 rounded-lg">
+          Pressure
+          <p class="text-center city-pressure">0</p>
+        </div>
+        <div class="bg-gray-800 p-2 rounded-lg">
+          Speed
+          <p class="text-center city-speed">0</p>
+        </div>
+        <div class="bg-gray-800 p-2 rounded-lg">
+          Humidity
+          <p class="text-center city-humidity">0</p>
+        </div>
+      </div>
+      <div>
+        <p class="error-message text-red-500 font-bold text-center hidden"></p>
+      </div>
+    </div>
+    <script src="Weather.js"></script>
+  </body>
+</html>
